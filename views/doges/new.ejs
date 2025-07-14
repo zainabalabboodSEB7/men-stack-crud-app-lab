@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Create a Dogs</title>
+</head>
+<body>
+    <h1>Create a New Dogs!</h1>
+    <a class="doges-index-link" href="/doges/">
+      <div class="index-link-text">Back to Dogs</div>
+    </a>
+  <form action="/doges" method="POST">
+    <label for="name">Dogs Name:</label>
+    <input type="text" name="name" id="name" required />
+
+    <label for="age">Age:</label>
+    <input type="text" name="age" id="age" placeholder="age" required />
+
+    <label for="description">Description:</label>
+    <textarea name="description" id="description" rows="4"></textarea>
+
+    <label for="gender">Gender:</label>
+    <input type="text" name="gender" id="gender" placeholder="male, female" required />
+
+    <label for="color">Color:</label>
+    <input type="tel" name="color" id="color"/>
+
+    <label for="price">Price: </label>
+    <input type="tel" name="price" id="price" placeholder="$price" />
+
+
+    <label for="website">Website:</label>
+    <input type="url" name="website" id="website" placeholder="https://example.com" />
+
+    <div class="checkbox-div">
+        <label for="isVaccinated">Is it vaccinated</label>
+        <input type="checkbox" name="isVaccinated" id="isVaccinated" />
+    </div>
+
+    <button type="submit">Add Dog</button>
+  </form>
+</body>
+</html>
