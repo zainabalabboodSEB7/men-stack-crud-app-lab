@@ -8,5 +8,43 @@
 </head>
 <body>
     <h1><%= foundDogs.name %></h1>
+		<% if (foundDogs.isVaccinated) { %> ✅ Vaccinated <% } %>
+
+		<p><strong>Age:</strong> <%= foundDogs.age %></p>
+
+		<p><strong>Description:</strong></p>
+		<p><%= foundDogs.description %></p>
+
+		<p><strong>Gender:</strong> <%= foundDogs.gender %></p>
+
+		<p><strong>Color:</strong> <%= foundDogs.color %></p>
+
+        <p><strong>Price:</strong> <%= foundDogs.price %></p>
+
+		<% if (foundDogs.website) { %>
+		<p>
+		<strong>Website:</strong>
+		<a href="<%= foundDogs.website %>" target="_blank">
+        <%= foundDogs.website %>
+      </a>
+		</p>
+		<% } %>
+
+<!-- new delete button -->
+    <div class="actions">
+        <form class="delete-form" action="/doges/<%=foundDogs._id%>?_method=DELETE" method="POST">
+          <button class="delete-button" type="submit">Delete <%= foundDogs.name %></button>
+        </form>
+
+        <a class="edit-link" href="/doges/<%= foundDogs._id %>/edit">
+        <div class="edit-text">Edit <%= foundDogs.name %></div>
+    </a>
+
+    </div>
+
+  <a class="doges-index-link" href="/doges">
+      <div class="index-link-text">Back to All Dogs</div>
+    </a>
+
 </body>
 </html>
